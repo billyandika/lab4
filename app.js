@@ -12,6 +12,9 @@ var index = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
 
+// Added for Lab 4
+var project = require('./routes/project');
+
 var app = express();
 
 // all environments
@@ -36,6 +39,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/project/:name', project.viewProject);// for Lab 4
 // Example route
 // app.get('/users', user.list);
 
